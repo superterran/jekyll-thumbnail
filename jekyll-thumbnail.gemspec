@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
     spec.homepage      = "https://superterran.github.io/jekyll-thumbnail/"
     spec.license       = "MIT"
   
-    spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(LICENSE|README|lib|_plugins)!i) }
+    spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(LICENSE|README|lib)!i) }
   
     spec.add_development_dependency "bundler", "~> 1.16"
     spec.add_development_dependency "rake", "~> 12.0"
