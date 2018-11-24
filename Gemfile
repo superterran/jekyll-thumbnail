@@ -6,4 +6,5 @@ group :test do
     gem 'liquid'
     gem 'mini_magick'
     gem 'minitest'
+    gem 'coveralls', require: false
 end
