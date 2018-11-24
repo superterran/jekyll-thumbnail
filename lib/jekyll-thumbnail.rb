@@ -1,8 +1,10 @@
 # Generates a thumbnail to an image and renders an image tag.
 
-require 'mini_magick'
+require "jekyll"
+require "mini_magick"
+require "jekyll-thumbnail/version"
 
-class Jekyll::Thumbnail < Liquid::Tag
+class JekyllThumbnail < Liquid::Tag
   # look up liquid variables
   # source: http://stackoverflow.com/a/8771374/1489823
   def look_up(context, name)
@@ -81,6 +83,4 @@ class Jekyll::Thumbnail < Liquid::Tag
   end
 end
 
-
-
-Liquid::Template.register_tag('thumbnail',   Jekyll::Thumbnail)
+Liquid::Template.register_tag('thumbnail', JekyllThumbnail)
