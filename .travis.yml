@@ -4,8 +4,7 @@ rvm:
 before_deploy:
   - git config --local user.name "Travis Build Server"
   - git config --local user.email "superterran@gmail.com"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
+  - git tag 0.2-$TRAVIS_BUILD_NUMBER
 deploy:
   provider: rubygems
   api_key: $RUBYGEMS_API_KEY
