@@ -4,3 +4,5 @@ rvm:
 deploy:
   provider: rubygems
   api_key: $RUBYGEMS_API_KEY
+  on:
+    all_branches: true
