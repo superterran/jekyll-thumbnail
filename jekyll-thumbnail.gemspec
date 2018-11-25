@@ -21,5 +21,14 @@ Gem::Specification.new do |spec|
     spec.add_dependency 'jekyll'
     spec.add_development_dependency "bundler", "~> 1.10"
     spec.add_development_dependency "rake", "~> 10.0"
+
+
+    spec.metadata = {
+      "bug_tracker_uri"   => "https://github.com/superterran/jekyll-thumbnail/issues",
+      "changelog_uri"     => "https://example.com/user/bestgemever/CHANGELOG.md",
+      "homepage_uri"      => "https://superterran.github.io/jekyll-thumbnail/",
+      "source_code_uri"   => "https://github.com/superterran/jekyll-thumbnail",
+      "wiki_uri"          => "https://github.com/superterran/jekyll-thumbnail/wiki"
+    }
   end
   
