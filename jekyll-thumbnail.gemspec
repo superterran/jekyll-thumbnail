@@ -6,8 +6,8 @@ require "jekyll-thumbnail/version"
 
 Gem::Specification.new do |spec|
     spec.name          = "jekyll-thumbnail"
-    spec.version       = ENV['TRAVIS_TAG'] || Jekyll::Thumbnail::VERSION
-    spec.version       = "#{spec.version}-#{ENV['TRAVIS_BUILD_NUMBER']}" if ENV['TRAVIS']
+    spec.version       = ENV['TRAVIS_BUILD_NUMBER'] || "0.0.0"
+    spec.version       = "#{ENV['TRAVIS_TAG']}" if ENV['TRAVIS_TAG']
     spec.authors       = ["Doug Hatcher"]
     spec.email         = ["superterran@gmail.com"]
   
