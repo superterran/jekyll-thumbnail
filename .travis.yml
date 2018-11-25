@@ -1,17 +1,18 @@
 language: ruby
 rvm:
  - 2.3
-before_deploy:
-  - git config --local user.name "Travis Build Server"
-  - git config --local user.email "superterran@gmail.com"
-  - git tag 0.2.$TRAVIS_BUILD_NUMBER
+
 deploy:
   prerelease: false
   provider: rubygems
   api_key: $RUBYGEMS_API_KEY
   skip_cleanup: true
-# deploy:
-#   provider: releases
-#   api_key: $GITHUB_API_KEY
-#   prerelease: false
-#   file: jekyll-thumbnail-0.2.$TRAVIS_BUILD_NUMBER.gem
+before_deploy:
+  - git config --local user.name "Travis Build Server"
+  - git config --local user.email "superterran@gmail.com"
+  - git tag 0.2.$TRAVIS_BUILD_NUMBER
+deploy:
+  provider: releases
+  api_key: $GITHUB_API_KEY
+  prerelease: false
+  file: jekyll-thumbnail-0.2.$TRAVIS_BUILD_NUMBER.gem
