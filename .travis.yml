@@ -6,6 +6,7 @@ before_deploy:
   - git config --local user.email "superterran@gmail.com"
   - git tag 0.2-$TRAVIS_BUILD_NUMBER
 deploy:
+  prerelease: false
   provider: rubygems
   api_key: $RUBYGEMS_API_KEY
   skip_cleanup: true
@@ -14,5 +15,6 @@ deploy:
 deploy:
   provider: releases
   api_key: $GITHUB_API_KEY
+  prerelease: false
   file_glob: true
   file: jekyll-thumbnail-*.gem
