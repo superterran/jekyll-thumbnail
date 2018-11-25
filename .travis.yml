@@ -4,7 +4,7 @@ rvm:
 before_deploy:
   - git config --local user.name "Travis Build Server"
   - git config --local user.email "superterran@gmail.com"
-  - git tag 0.2-$TRAVIS_BUILD_NUMBER
+  - git tag 0.2.$TRAVIS_BUILD_NUMBER
 deploy:
   prerelease: false
   provider: rubygems
