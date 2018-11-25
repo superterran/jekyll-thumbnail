@@ -1,4 +1,6 @@
 # Jekyll Thumbnail
+[![Build Status](https://travis-ci.org/superterran/jekyll-thumbnail.svg?branch=master)](https://travis-ci.org/superterran/jekyll-thumbnail)
+
 
 Adds a liquid tag that can generate thumbnails, with watermarks, at any size you dictate.
 
