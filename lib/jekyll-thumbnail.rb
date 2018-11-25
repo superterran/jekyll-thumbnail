@@ -2,7 +2,6 @@
 
 require "jekyll"
 require "mini_magick"
-require "jekyll-thumbnail/version"
 
 class JekyllThumbnail < Liquid::Tag
   # look up liquid variables
