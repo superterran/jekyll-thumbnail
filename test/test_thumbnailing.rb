@@ -1,11 +1,10 @@
+require 'coveralls'
+Coveralls.wear!
+
 require 'liquid'
 require 'jekyll-thumbnail'
 require "minitest/autorun"
-require 'coveralls'
 require 'fastimage'
-
-
-Coveralls.wear!
 
 class TestJekyllThumbnail < Minitest::Test
 
