@@ -43,8 +43,12 @@ class TestJekyllThumbnail < Minitest::Test
     assert(FastImage.size(TestJekyllThumbnail::RectImageThumb)[1] == 38)
   end
 
-  def test_check_size_of_thumbnailed_image_1
-    assert(Liquid::Template.parse('{% thumbnail '+TestJekyllThumbnail::SquareImageThumb+' %}').render() == "Could not create thumbnail for . Usage: thumbnail /path/to/local/image.png 50x50<")
+  def test_check_size_of_thumbnailed_image
+    assert(Liquid::Template.parse('{% thumbnail '+TestJekyllThumbnail::SquareImageThumb+' %}').render() == "Could not create thumbnail for . Usage: thumbnail /path/to/local/image.png 50x50")
+  end
+
+  def test_fail_if_file_does_not_exist
+    assert(Liquid::Template.parse('{% thumbnail img/notexists.jpg %}').render() == "Could not create thumbnail for . Usage: thumbnail /path/to/local/image.png 50x50")
   end
 
 end

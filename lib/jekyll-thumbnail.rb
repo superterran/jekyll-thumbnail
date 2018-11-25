@@ -69,7 +69,7 @@ class JekyllThumbnail < Liquid::Tag
 
       # TODO support relative paths
     else
-      "Could not create thumbnail for #{source}. Usage: thumbnail /path/to/local/image.png 50x50<"
+      "Could not create thumbnail for #{source}. Usage: thumbnail /path/to/local/image.png 50x50"
     end
   end
 end
