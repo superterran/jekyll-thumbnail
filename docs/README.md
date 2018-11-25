@@ -16,7 +16,7 @@ gem 'jekyll-thumbnail'
 Then, use it in your Liquid templates as follows:
 
 ```
-{% thumbnail path/to/image.jpg 50x50 %}
+{{ "{% thumbnail path/to/image.jpg 50x50 " }}%}
 ```
 This will pass the image through the thumbnailer, and generate a thumbs/ directory where the image is located.
 
