@@ -10,11 +10,8 @@ deploy:
   provider: rubygems
   api_key: $RUBYGEMS_API_KEY
   skip_cleanup: true
-  on:
-    all_branches: true
 deploy:
   provider: releases
   api_key: $GITHUB_API_KEY
   prerelease: false
-  file_glob: true
-  file: jekyll-thumbnail-*.gem
+  file: jekyll-thumbnail-0.2.$TRAVIS_BUILD_NUMBER.gem
